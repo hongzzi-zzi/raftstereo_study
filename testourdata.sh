@@ -1,0 +1,9 @@
+python demo.py --restore_ckpt models/raftstereo-eth3d.pth -l=/home/h/Desktop/left_right/left2000.png -r=/home/h/Desktop/left_right/right2000.png --output_directory 'demo_output/eth3dmodel_2000'
+python demo.py --restore_ckpt models/raftstereo-middlebury.pth -l=/home/h/Desktop/left_right/left2000.png -r=/home/h/Desktop/left_right/right2000.png --output_directory 'demo_output/middleburymodel_2000'
+# python demo.py --restore_ckpt models/raftstereo-realtime.pth -l=/home/h/Desktop/left_right/left_resize.png -r=/home/h/Desktop/left_right/right_resize.png --output_directory 'demo_output/realtimemodel'
+        # size mismatch for module.update_block.gru16.convz.weight: copying a param with shape torch.Size([128, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 384, 3, 3]).
+        # size mismatch for module.update_block.gru16.convr.weight: copying a param with shape torch.Size([128, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 384, 3, 3]).
+        # size mismatch for module.update_block.gru16.convq.weight: copying a param with shape torch.Size([128, 256, 3, 3]) from checkpoint, the shape in current model is torch.Size([128, 384, 3, 3]).
+        # size mismatch for module.update_block.mask.2.weight: copying a param with shape torch.Size([576, 256, 1, 1]) from checkpoint, the shape in current model is torch.Size([144, 256, 1, 1]).
+        # size mismatch for module.update_block.mask.2.bias: copying a param with shape torch.Size([576]) from checkpoint, the shape in current model is torch.Size([144]).
+python demo.py --restore_ckpt models/raftstereo-sceneflow.pth -l=/home/h/Desktop/left_right/left2000.png -r=/home/h/Desktop/left_right/right2000.png --output_directory 'demo_output/sceneflowmodel_2000'
